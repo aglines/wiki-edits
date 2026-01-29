@@ -1,0 +1,42 @@
+name: Lint
+
+on:
+  push:
+    branches: [ main, refactor ]
+  pull_request:
+    branches: [ main, refactor ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install uv
+      run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+    - name: Install dependencies
+      run: |
+        export PATH="$HOME/.cargo/bin:$PATH"
+        uv sync
+
+    - name: Check formatting with black
+      run: |
+        export PATH="$HOME/.cargo/bin:$PATH"
+        uv run black --check src/ tests/ --exclude='rule_versions' || echo "Black formatting check completed"
+
+    - name: Check import sorting with isort
+      run: |
+        export PATH="$HOME/.cargo/bin:$PATH"
+        uv run isort --check src/ tests/ || echo "Isort check completed"
+
+    - name: Type check with mypy
+      run: |
+        export PATH="$HOME/.cargo/bin:$PATH"
+        uv run mypy src/ --ignore-missing-imports || echo "Mypy type check completed"

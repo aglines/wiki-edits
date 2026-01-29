@@ -1,0 +1,61 @@
+{
+  "version": "1.0.2",
+  "patterns": {
+    "emojis": {
+      "pattern": "[🧠🧱🚨🧭🪷🕰️📭🌕🌀🌠📤🔌]",
+      "description": "Emojis commonly found in AI-generated headings/lists"
+    },
+    "placeholder_templates": {
+      "pattern": "\\[.*'s name\\]|\\[url of source|\\[entertainer's name\\]",
+      "description": "Placeholder brackets and templates"
+    },
+    "markdown_syntax": {
+      "pattern": "\\*\\*.*\\*\\*|^# [^=]|^## [^=]|^---$",
+      "exclude_pattern": "'''.*'''",
+      "description": "Markdown formatting instead of wikitext"
+    },
+    "chatgpt_artifacts": [
+      "turn0search",
+      "turn0image",
+      "oaicite:",
+      "utm_source=chatgpt.com"
+    ],
+    "chatgpt_attribution": [
+      "{\"attribution\":{\"attributableindex\":"
+    ],
+    "prompt_refusal": [
+      "as an ai language model",
+      "as a large language model",
+      "openai use policy"
+    ],
+    "knowledge_cutoff_disclaimers": [
+      "up to my last training update",
+      "based on available information",
+      "while specific details are limited",
+      "not widely available",
+      "not widely documented"
+    ],
+    "collaborative_communication": [
+      "i hope this helps",
+      "certainly!",
+      "let me know",
+      "would you like"
+    ],
+    "promotional_language": [
+      "rich cultural heritage",
+      "breathtaking",
+      "nestled",
+      "stunning natural beauty"
+    ],
+    "importance_emphasis": [
+      "stands as a testament",
+      "serves as a testament",
+      "plays a vital role",
+      "plays a significant role",
+      "continues to captivate",
+      "watershed moment",
+      "deeply rooted",
+      "profound heritage"
+    ]
+  }
+}

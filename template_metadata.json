@@ -1,0 +1,24 @@
+{
+  "name": "Wiki Edits Pipeline",
+  "description": "Processes Wikipedia edit stream from Pub/Sub to BigQuery with AI detection",
+  "parameters": [
+    {
+      "name": "topic",
+      "label": "Pub/Sub Topic",
+      "helpText": "Full Pub/Sub topic path",
+      "isOptional": false
+    },
+    {
+      "name": "subscription",
+      "label": "Pub/Sub Subscription",
+      "helpText": "Full Pub/Sub subscription path",
+      "isOptional": false
+    },
+    {
+      "name": "output_table",
+      "label": "BigQuery Output Table",
+      "helpText": "BigQuery table in format project.dataset.table",
+      "isOptional": false
+    }
+  ]
+}
