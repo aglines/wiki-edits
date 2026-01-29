@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-**A data engineering project demonstrating real-time streaming architecture and scalable pattern detection to (potentially) identify AI-like editing of Wikipedias.**
+**A data engineering project demonstrating real-time streaming architecture and scalable pattern detection to (potentially) identify AI-like editing of Wikipedia articles.**
 
 **Tech Stack:** Apache Beam • Google Cloud Dataflow • BigQuery • Pub/Sub • Python
 
